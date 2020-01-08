@@ -11,6 +11,5 @@ attr_accessor :discount, :total
     self.total += price * quantity
   end
 
-  end
 
 end
