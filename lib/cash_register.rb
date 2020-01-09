@@ -8,7 +8,7 @@ attr_accessor :discount, :total, :items, :last_price
     @total = 0
     @discount = discount * 1.0
     @items = []
-    @last_item = nil
+    @last_quanity = 0
     @last_price = 0
   end
 
