@@ -29,7 +29,7 @@ attr_accessor :discount, :total, :items, :last_price, :last_quanity
   end
 
   def void_last_transaction
-    self.total -= @last_price
+    self.total -= @last_price * @last_quanity
   end
 
 
