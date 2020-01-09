@@ -22,8 +22,9 @@ attr_accessor :discount, :total, :items
     if discount != 0
     then self.total = total - (total * discount / 100.0)
     "After the discount, the total comes to $#{self.total.to_i}."
-  else
+    else
     "There is no discount to apply."
+    end
   end
 
   def void_last_transaction
