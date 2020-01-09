@@ -8,11 +8,14 @@ attr_accessor :discount, :total, :items
     @total = 0
     @discount = discount * 1.0
     @items = []
+    @last_item = nil
+    @last_price = 0
   end
 
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
     items.concat(Array.new(quantity, title))
+    last_price = price * quantity
   end
 
   def apply_discount
@@ -24,6 +27,9 @@ attr_accessor :discount, :total, :items
   end
   end
 
+  def void_last_transaction
+    total -= last_price
+  end
 
 
 end
