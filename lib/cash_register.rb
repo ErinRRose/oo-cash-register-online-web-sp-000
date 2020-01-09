@@ -16,6 +16,7 @@ attr_accessor :discount, :total, :items, :last_price
     self.total += price * quantity
     items.concat(Array.new(quantity, title))
     self.last_price = price * quantity
+    last_quanity = quantity
   end
 
   def apply_discount
